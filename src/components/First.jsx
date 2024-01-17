@@ -3,8 +3,10 @@ import { io } from "socket.io-client";
 
 const First = () => {
   const socketRef = useRef();
+  const url = "https://testdevapi.kdev.co.in";
+  //   const url = "http://localhost:8500";
   useEffect(() => {
-    socketRef.current = io("http://localhost:8500");
+    socketRef.current = io(url);
     socketRef?.current?.emit("addUser", { msg: "123" });
   }, []);
 
