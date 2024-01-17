@@ -15,6 +15,7 @@ const First = () => {
       console.log(msg);
     });
     socketRef?.current?.on("tapped", (msg) => {
+      alert(msg);
       console.log(msg);
     });
     socketRef?.current?.on("hey", (msg) => {
